@@ -14,6 +14,7 @@ function Login()
             password: "",
             confirmpassword: "",
         }); // an array of state variable
+        const [isDisabled, setIsDisabled] = useState(true);
 
         const input = [
             {
@@ -99,7 +100,8 @@ function Login()
         };
 
         const handleOnChange = (e) => {
-            const { name, value } = e.target;
+          const { name, value } = e.target;
+          
             // Validate input based on the field name
             switch (name) {
               case "username":
@@ -108,34 +110,53 @@ function Login()
                   setformData({ ...formData, [name]: value });
                 }
                 break;
-              case "phonenumber":
+               case "phonenumber":
                 // Allow only digits and ensure length is less than or equal to 10
                 if (/^\d*$/.test(value) && value.length <= 10) {
                   setformData({ ...formData, [name]: value });
                 }
                 break;
-              default:
+               default:
                 // For other fields, simply update the formData state
                 setformData({ ...formData, [name]: value });
                 break;
             }
-          };
+        };
+  
+     const onhandleChange = (e) =>
+     { 
+       const { name, value } = e.target;
+       if (name === "confirmpassword") {
+         setformData({ ...formData, [name]: value });
+         if (formData.username && formData.phonenumber && formData.email && formData.password) {
+             console.log(formData.username);
+             setIsDisabled(!isDisabled);
+           }   
+       }
+     }
 
         return (
-            <div className="login">
+          <div className="login">
             <form onSubmit={handleSubmit}>
-                <h1>Form</h1>
-                {input.map((input) => (
+              <h1>Form</h1>
+              {input.map((input) => (
                 <FormInput
-                    key={input.id}
-                    {...input}
-                    value={formData[input.name]}
-                    onChange={handleOnChange}
+                  key={input.id}
+                  {...input}
+                  value={formData[input.name]}
+                  onChange={handleOnChange}
+                  onClick={onhandleChange}
                 />
-                ))}
-                <button onChange={handleSubmit}>Submit</button>
+              ))}
+              <button
+                className={isDisabled ? "disabled" : ""}
+                // onClick={() => setIsDisabled(!isDisabled)}
+                style={{ pointerEvents: isDisabled ? "none" : "auto" }}
+              >
+                Submit
+              </button>
             </form>
-            </div>
+          </div>
         );
     }
 
