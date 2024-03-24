@@ -1,7 +1,10 @@
 import "./ApartmentInfo.css";
 import Dropdown from "../Filter/Dropdown/Dropdown";
 import Checkbox from "../Filter/Checkbox/Checkbox";
-import FileUpload from "../Filter/FileUpload/FileUpload.jsx"
+import FileUpload from "../Filter/FileUpload/FileUpload.jsx";
+import CalenderwithLib from "../Filter/Calender/Calenderwithlibrary/Calender.jsx";
+import CalenderwithoutLib from "../Filter/Calender/CaldenderwithoutLibraray/CalenderwithoutLib.jsx"
+
 
 
 const dropdownOptionList = [
@@ -26,7 +29,7 @@ const ApartmentInfo = () => {
     <div className="apatmentInfo">
       <form className="apartmentInfoForm">
         <h1>Apartment Details</h1>
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <span className="label">{"Amenities"}</span>
           <Dropdown
             name="dropdown"
@@ -48,7 +51,11 @@ const ApartmentInfo = () => {
             name="fileupload"
             onChange={handleOnChange}
           />
-        </div>
+        </div> */}
+        <div className="Calender">
+          <CalenderwithoutLib
+          />
+        </div> 
       </form>
     </div>
   );
