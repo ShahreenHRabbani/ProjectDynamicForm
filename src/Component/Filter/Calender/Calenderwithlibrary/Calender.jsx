@@ -1,7 +1,8 @@
 import { DateRangePicker } from "react-date-range";
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 import { useState } from "react";
-
-import "./Calender.css";
+import "./Calender.css"
 
 
 const Calender = () =>
@@ -15,12 +16,13 @@ const Calender = () =>
         }
     )
 
-    return 
-    (
+    return (
+       <>
         <div className="container">
-            <span className="calender">start date to end date</span>
-            <DateRangePicker ranges={[date]} onchange = {() => {}} />
+        <span className="calender">start date to end date</span>
+        <DateRangePicker ranges={[date]} onchange={() => {}} />
         </div>
+        </>
     )
 
 }

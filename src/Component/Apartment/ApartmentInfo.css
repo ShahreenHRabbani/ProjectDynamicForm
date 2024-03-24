@@ -1,5 +1,3 @@
-/* ApartmentInfo.css */
-/* ApartmentInfo.css */
 .apatmentInfo {
   display: flex;
   flex-direction: column;
@@ -10,12 +8,7 @@
   overflow: scroll;; /* Set the text color to white for contrast */
 }
 
-form{
-   background-color: white;
-    padding: 0px 60px;
-    border-radius: 10px;
-    overflow: scroll;
-}
+
 
 h1{
     color: rgb(77, 1, 77);

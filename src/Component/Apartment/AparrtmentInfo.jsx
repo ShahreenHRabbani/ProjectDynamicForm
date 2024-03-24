@@ -27,8 +27,9 @@ const handleOnChange = (e) =>
 const ApartmentInfo = () => {
   return (
     <div className="apatmentInfo">
-      <form className="apartmentInfoForm">
-        <h1>Apartment Details</h1>
+      <div className="apartmentInfoForm">
+        <h1> </h1>
+        <h1> </h1>
         {/* <div className="dropdown">
           <span className="label">{"Amenities"}</span>
           <Dropdown
@@ -53,10 +54,9 @@ const ApartmentInfo = () => {
           />
         </div> */}
         <div className="Calender">
-          <CalenderwithoutLib
-          />
-        </div> 
-      </form>
+          <CalenderwithoutLib />
+        </div>
+      </div>
     </div>
   );
 };

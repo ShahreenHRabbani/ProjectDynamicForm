@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./Checkbox.css";
+
+import "./Checkbox.css";// 
 
 const Checkbox = ({ checkboxOptions, onChange, name }) => {
   const [selectedItems, setSelectedItems] = useState([]);
