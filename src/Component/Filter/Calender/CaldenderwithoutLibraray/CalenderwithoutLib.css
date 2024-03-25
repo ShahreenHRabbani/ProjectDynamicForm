@@ -1,0 +1,28 @@
+.date-range-picker {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.date-range-picker label {
+  margin-bottom: 5px;
+}
+
+.date-range-picker input[type="text"] {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.date-range-picker input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.selected-dates p {
+  margin: 5px 0;
+}

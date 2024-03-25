@@ -7,14 +7,11 @@ import "./Calender.css"
 
 const Calender = () =>
 {
-    const [date , setDate] = useState(
-        {
-            startDate: new Date(),
-            endeDate : new Date (),
-            key :'selection',
-
-        }
-    )
+    const [date, setDate] = useState({
+      startDate: new Date(), //initial value set to the current date (new Date()).
+      endeDate: new Date(),
+      key: "selection",
+    });
 
     return (
        <>
