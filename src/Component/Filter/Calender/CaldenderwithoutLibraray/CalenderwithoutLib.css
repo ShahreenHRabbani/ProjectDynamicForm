@@ -1,28 +1,17 @@
-.date-range-picker {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
+.button-container {
+  text-align: center; /* Center the buttons horizontally */
+  margin-top: 20px; /* Add some top margin */
 }
 
-.date-range-picker label {
-  margin-bottom: 5px;
+.button-container button {
+  margin: 0 10px; /* Add margin to separate the buttons */
+  /* padding: 10px 20px; Add padding for better appearance */
+  background-color: #007bff; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
-
-.date-range-picker input[type="text"] {
-  width: 300px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.date-range-picker input[type="text"]:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-.selected-dates p {
-  margin: 5px 0;
+.button-container button:hover {
+  background-color: #0056b3; /* Change background color on hover */
 }

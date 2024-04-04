@@ -1,5 +1,6 @@
 import "./ApartmentInfo.css";
-import Dropdown from "../Filter/Dropdown/Dropdown";
+import Dropdown from "../Filter/Dropdown/SearchMultiple/Dropdown.jsx";
+import MegaDropdown from "../Filter/Dropdown/Mega-Dropdown-Menu/MegaDropdownMenu.jsx"
 import Checkbox from "../Filter/Checkbox/Checkbox";
 import FileUpload from "../Filter/FileUpload/FileUpload.jsx";
 import CalenderwithLib from "../Filter/Calender/Calenderwithlibrary/Calender.jsx";
@@ -37,8 +38,12 @@ const ApartmentInfo = () => {
             dropdownOptions={dropdownOptionList}
             onChange={handleOnChange}
           />
+        </div> */}
+        <div className="dropdown">
+          <span className="label">{"Amenities"}</span>
+          <MegaDropdown  />
         </div>
-        <div className="checkbox">
+        {/* <div className="checkbox">
           <span className="label">{"Select your preferred units"}</span>
           <Checkbox
             name="checkboxes"
@@ -52,10 +57,10 @@ const ApartmentInfo = () => {
             name="fileupload"
             onChange={handleOnChange}
           />
-        </div> */}
-        <div className="Calender">
+        </div> 
+         <div className="Calender">
           <CalenderwithoutLib />
-        </div>
+        </div> */}
       </div>
     </div>
   );

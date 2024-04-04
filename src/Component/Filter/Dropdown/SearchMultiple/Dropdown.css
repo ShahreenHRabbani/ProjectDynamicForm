@@ -1,0 +1,58 @@
+/* Dropdown.css */
+
+.dropdown {
+  position: relative;
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+.search {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding does not affect the final dimensions */
+  background-color: white;
+  color: black;
+}
+
+.menu {
+  position: absolute;
+  width: calc(100% - 2px); /* Adjust width based on border */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  max-height: 200px; /* Example max height */
+  overflow-y: auto; /* Allows scrolling */
+  z-index: 1000; /* Ensures dropdown appears above other content */
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  padding: 8px;
+  cursor: pointer;
+  color: black;
+}
+
+.item:hover, .item:active {
+  background-color: brown;
+  color: white;
+}
+
+.selectedItems {
+  margin-bottom: 5px;
+}
+
+.selectedItem {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 6px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  color: black;
+}

@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 import App from './App.jsx'
-import './index.css'
+// import './index.css'
+
+//for Navbar 
+import  "./index_Navbar.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
